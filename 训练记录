@@ -1,0 +1,17 @@
+
+
+
+# 训练命令
+
+# yolov5s
+python ./train.py --epochs 300 --cfg models/yolov5s.yaml --hyp data/hyps/hyp.scratch-low.yaml --data data/VOC.yaml --weight weights/yolov5s.pt --workers 4 --batch 16
+
+
+
+# 评估命令
+python ./val.py --data  data/VOC.yaml --weights ../weights/exp/weights/best.pt
+
+
+# UI.ui转UI.py
+pyuic5 -x UI.ui -o UI.py
+
